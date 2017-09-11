@@ -2,17 +2,8 @@ var https = require('https');
 
 //function to retrieve host and path(not hardcoded)
 function getAndPrintHTML (options) {
-	var options = {
-		host: "",
-		path: ""
-	}
-
-	options.host = requestOptions.host
-    options.path =  requestOptions.path
-  
-
-
-//GET Data from source 
+	
+	//GET Data from source 
     https.get(requestOptions,function (response) {
 
 //explains how to encode incoming data
@@ -40,4 +31,4 @@ function getAndPrintHTML (options) {
     path: '/http-examples/step2.html'
 }
 
-getAndPrintHTML();
+getAndPrintHTML(requestOptions);
